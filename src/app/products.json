@@ -175,17 +175,8 @@
         "bestseller" : false
     },
 
-    {
-        "name":"MacBook Pro 16 M2 (2023)",
-        "imageSrc":"../images/MacBooksImages/mac1.png",
-        "price":2659,
-        "quantity": 1,
-        "id": "MacBook Pro 16 M2 (2023)",
-        "brand": "Apple",
-        "category":"laptops",
-        "bestseller": true
-    }
-    ,
+   
+    
 
     {
         "name":"MacBook Pro 2021 M1 Pro 10-Core",
@@ -223,17 +214,6 @@
     }
     ,
 
-    {
-        "name":"MacBook Pro M2 (2023)",
-        "imageSrc":"../images/MacBooksImages/mac5.png",
-        "price":2098,
-        "quantity": 1,
-        "id": "MacBook Pro M2 (2023)",
-        "brand": "Apple",
-        "category":"laptops",
-        "bestseller" : false
-    }
-    ,
 
     {
         "name":"MacBook Air 2022 M2",
