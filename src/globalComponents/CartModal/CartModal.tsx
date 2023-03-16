@@ -3,6 +3,7 @@ import { RootState } from "../../app/store"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { toggleCartModal } from "../../features/OpenCartModal/cartModalSlice"
 import { AiOutlineClose } from "react-icons/ai"
+import TranspBack from "../TransparentBackground/TranspBack"
 
 const CartModal: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -15,13 +16,17 @@ const CartModal: React.FC = () => {
   }
   return (
     <>
-      <div
-        className="cart-modal h-[500px] w-[500px] bg-white absolute top-1/3 left-1/3"
-        style={{display: isCartModalOpen? "flex" : "none"}}
-      >
-
-            <AiOutlineClose className="text-5xl ml-auto" onClick={handleCloseModalClick}/>
-      </div>
+      <TranspBack style={{ display: isCartModalOpen ? "flex" : "none" }}>
+        <div
+          className="cart-modal h-[400px] w-[400px] bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default"
+          style={{ display: isCartModalOpen ? "flex" : "none" }}
+        >
+          <AiOutlineClose
+            className="text-5xl ml-auto cursor-pointer"
+            onClick={handleCloseModalClick}
+          />
+        </div>
+      </TranspBack>
     </>
   )
 }
