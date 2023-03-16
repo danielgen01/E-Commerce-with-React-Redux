@@ -6,7 +6,8 @@
         "quantity": 1,
         "id": "iPhone 14 Pro Max",
         "brand":"Apple",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller": true
     },
 
     {
@@ -16,7 +17,8 @@
         "quantity": 1,
         "id": "iPhone 14",
         "brand":"Apple",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -26,7 +28,8 @@
         "quantity": 1,
         "id": "iPhone 13",
         "brand":"Apple",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -36,7 +39,8 @@
         "quantity": 1,
         "id": "iPhone 12",
         "brand":"Apple",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -46,7 +50,8 @@
         "quantity": 1,
         "id": "iPhone SE 2022",
         "brand":"Apple",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -56,7 +61,8 @@
         "quantity": 1,
         "id": "iPhone X 64GB",
         "brand":"Apple",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -66,7 +72,8 @@
         "quantity": 1,
         "id": "iPhone 11",
         "brand":"Apple",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -76,7 +83,8 @@
         "quantity": 1,
         "id": "Galaxy S23 Ultra",
         "brand":"Samsung",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller": true
     },
 
     {
@@ -86,7 +94,8 @@
         "quantity": 1,
         "id": "Galaxy S22",
         "brand":"Samsung",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -96,7 +105,8 @@
         "quantity": 1,
         "id": "Galaxy Z Flip 4",
         "brand":"Samsung",
-        "category" :"phones"
+        "category" :"phones",
+        "bestseller" : false
     },
 
     {
@@ -106,7 +116,8 @@
         "quantity": 1,
         "id": "Nintendo Switch neon",
         "brand":"Nintendo",
-        "category":"consoles"
+        "category":"consoles",
+        "bestseller": true
     },
 
     {
@@ -116,7 +127,8 @@
         "quantity": 1,
         "id": "PS5 Digital + GoW Bundle",
         "brand":"Sony",
-        "category":"consoles"
+        "category":"consoles",
+        "bestseller": true
     },
 
     {
@@ -126,7 +138,8 @@
         "quantity": 1,
         "id": "XBOX Series S",
         "brand":"Microsoft",
-        "category":"consoles"
+        "category":"consoles",
+        "bestseller" : false
     },
 
     {
@@ -136,7 +149,8 @@
         "quantity": 1,
         "id": "PS4",
         "brand":"Sony",
-        "category":"consoles"
+        "category":"consoles",
+        "bestseller" : false
     },
 
     {
@@ -146,7 +160,8 @@
         "quantity": 1,
         "id": "PS5 Disc + GoW Bundle",
         "brand":"Sony",
-        "category":"consoles"
+        "category":"consoles",
+        "bestseller": true
     },
 
     {
@@ -156,7 +171,8 @@
         "quantity": 1,
         "id": "XBOX Series X + Forza",
         "brand":"Microsoft",
-        "category":"consoles"
+        "category":"consoles",
+        "bestseller" : false
     },
 
     {
@@ -166,7 +182,8 @@
         "quantity": 1,
         "id": "MacBook Pro 16 M2 (2023)",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller": true
     }
     ,
 
@@ -177,7 +194,8 @@
         "quantity": 1,
         "id": "MacBook Pro 2021 M1 Pro 10-Core",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -188,7 +206,8 @@
         "quantity": 1,
         "id": "MacBook Pro 2021 M1 Max 10-Core",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -199,7 +218,8 @@
         "quantity": 1,
         "id": "MacBook Pro 2022 M2",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -210,7 +230,8 @@
         "quantity": 1,
         "id": "MacBook Pro M2 (2023)",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -221,7 +242,8 @@
         "quantity": 1,
         "id": "MacBook Air 2022 M2",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -232,7 +254,8 @@
         "quantity": 1,
         "id": "MacBook Pro 2019",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -243,7 +266,8 @@
         "quantity": 1,
         "id": "MacBook Pro 2020 M1",
         "brand": "Apple",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -254,7 +278,8 @@
         "quantity": 1,
         "id": "Acer Nitro 5 (AN517-54-794W)",
         "brand": "Acer",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
     }
     ,
 
@@ -265,7 +290,8 @@
         "quantity": 1,
         "id": "Acer Swift 3 (SF314-43-R0JE)",
         "brand": "Acer",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller": true
     }
     ,
 
@@ -276,7 +302,8 @@
         "quantity": 1,
         "id": "Acer Predator Helios 16 (PH16-71-731Q)",
         "brand": "Acer",
-        "category":"laptops"
+        "category":"laptops",
+        "bestseller" : false
 
     },
 
@@ -287,7 +314,8 @@
         "quantity": 1,
         "id": "AirPods (2016)",
         "brand":"Apple",
-        "category":"gadgets"
+        "category":"gadgets",
+        "bestseller": true
     },
 
     {
@@ -297,7 +325,8 @@
         "quantity": 1,
         "id": "AirPods 3 (2021) mit Ladecase",
         "brand":"Apple",
-        "category":"gadgets"
+        "category":"gadgets",
+        "bestseller" : false
     },
 
     {
@@ -307,7 +336,8 @@
         "quantity": 1,
         "id": "Kabel USB-C auf Lightning",
         "brand":"Apple",
-        "category":"gadgets"
+        "category":"gadgets",
+        "bestseller" : false
     },
 
     {
@@ -317,6 +347,7 @@
         "quantity": 1,
         "id": "MagSafe Ladegerät 15W",
         "brand":"Apple",
-        "category":"gadgets"
+        "category":"gadgets",
+        "bestseller": true
     }
 ]
