@@ -6,7 +6,7 @@ const GadgetsPage:React.FC= () => {
   return (
     <>
       <div className=" bg-black/90 h-screen">
-        <ShopLayout category={"gadgets"}/>
+        <ShopLayout category={"gadgets"} pageTitle="Gadgets"/>
       </div>
     </>
   )

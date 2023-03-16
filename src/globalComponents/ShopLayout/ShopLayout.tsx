@@ -15,12 +15,13 @@ interface Item {
 
 interface Props {
   category:string
+  pageTitle:string
 }
 
 
 
 
-const ShopLayout: React.FC<Props> = ({category}) => {
+const ShopLayout: React.FC<Props> = ({category, pageTitle}) => {
   const specificCategory = products.filter((product: Item) => product.category === category)
 
   const productList = specificCategory.map((product: Item) => (
@@ -55,12 +56,12 @@ const ShopLayout: React.FC<Props> = ({category}) => {
   return (
     <>
       <div
-        data-aos="zoom-in"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top-center"
+        // data-aos="zoom-in"
+        // data-aos-duration="500"
+        // data-aos-easing="ease-in-out"
+        // data-aos-mirror="true"
+        // data-aos-once="false"
+        // data-aos-anchor-placement="top-center"
       >
         <div
           className="relevance-filter 
@@ -78,10 +79,10 @@ const ShopLayout: React.FC<Props> = ({category}) => {
         <div className="shop flex flex-col lg:flex-row bg-black">
           <div className="flex flex-col items-center lg:w-1/3 gap-4">
             <h1 className="text-white font-bold text-4xl lg:hidden">
-              pageTitle
+              {pageTitle}
             </h1>
             <h3 className="text-white lg:hidden font-normal text-lg">
-              {products.length} items
+              {productList.length} items
             </h3>
 
             <FilterSectionDesktop />

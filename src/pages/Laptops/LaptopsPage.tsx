@@ -6,7 +6,7 @@ const LaptopsPage:React.FC= () => {
   return (
     <>
       <div className=" bg-black/90 h-screen">
-        <ShopLayout category={"laptops"}/>
+        <ShopLayout category={"laptops"} pageTitle="Laptops"/>
       </div>
     </>
   )

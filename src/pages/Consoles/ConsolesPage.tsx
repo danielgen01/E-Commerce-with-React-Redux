@@ -6,7 +6,7 @@ const ConsolesPage:React.FC= () => {
   return (
     <>
       <div className=" bg-black/90 h-screen">
-        <ShopLayout category={"consoles"} />
+        <ShopLayout category={"consoles"} pageTitle="Consoles" />
       </div>
     </>
   )
