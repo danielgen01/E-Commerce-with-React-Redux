@@ -6,20 +6,15 @@ const Imagebanner: React.FC = () => {
     <>
       <div
         className="
-      background-wrapper
+      background-wrapper 
       flex flex-col justify-start items-center 
-      bg-black h-3/4 lg:h-screen py-20 lg:py-40
+      bg-black h-3/4  py-20 lg:py-40 
 
       lg:flex-row lg:items-start"
-        data-aos="zoom-in"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top-center"
+      
       >
         <div
-          className="z-10 macbook-background 
+          className=" macbook-background 
           h-1/2 w-full
       lg:order-2 
       "
@@ -38,7 +33,7 @@ const Imagebanner: React.FC = () => {
         <div
           className="background-text-container
         flex flex-col items-center justify-center
-         z-20  w-full
+          w-full
         lg:order-1 
       "
         >

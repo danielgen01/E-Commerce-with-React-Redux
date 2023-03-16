@@ -17,6 +17,7 @@ function App() {
         <Route path="" element={<Homepage />}></Route>
       </Routes>
     </BrowserRouter>
+   
   </>
   );
 }

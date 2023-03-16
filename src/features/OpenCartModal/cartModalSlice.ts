@@ -9,12 +9,12 @@ const initialState: CartModalState = {
 };
 
 const cartModalSlice = createSlice({
-  name: 'cart',
+  name: 'cartModal',
   initialState,
   reducers: {
     toggleCartModal: (state) => {
       state.isCartModalOpen = !state.isCartModalOpen;
-      
+
       if (state.isCartModalOpen) {
         document.body.style.overflow = 'hidden';
       } else {

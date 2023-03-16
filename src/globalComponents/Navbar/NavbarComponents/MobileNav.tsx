@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 import { AiOutlineHome } from "react-icons/ai"
 import { HiMenuAlt3 } from "react-icons/hi"
 import { AiOutlineArrowLeft } from "react-icons/ai"
+import TransparentBackground from "../../TransparentBackground/TransparentBackground"
 
 const MobileNavMenu: React.FC = () => {
   const [isTouchNavMenuOpen, setIsTouchNavMenuOpen] = useState<boolean>(false)
@@ -28,7 +29,7 @@ const MobileNavMenu: React.FC = () => {
       >
         {isTouchNavMenuOpen ? (
           <AiOutlineArrowLeft
-            className="bx bx-x text-5xl cursor-pointer z-50"
+            className="bx bx-x text-5xl cursor-pointer z-40"
             onClick={toggleTouchNavMenu}
           />
         ) : (
@@ -39,44 +40,53 @@ const MobileNavMenu: React.FC = () => {
         )}
       </div>
 
-      <div
-        className="touch-menu-nav-links
-          flex flex-col gap-10 items-center 
-        py-20
-        absolute top-0 h-full w-2/3 bg-gray-800 z-40 rounded 
-        animate-menu-slide
-        "
+      <TransparentBackground
+        onClick={toggleTouchNavMenu}
         style={{ display: isTouchNavMenuOpen ? "flex" : "none" }}
       >
-        <NavLink to="/" className="" onClick={toggleTouchNavMenu}>
-          <AiOutlineHome className="bx bxs-home text-5xl" />
-        </NavLink>
+        <div
+          className="touch-menu-nav-links
+          flex flex-col gap-10 items-center 
+        py-20
+        absolute top-0 h-screen w-2/3 bg-gray-800 z-[99999999999999999999]rounded cursor-default 
+        animate-menu-slide
+        "
+          style={{ display: isTouchNavMenuOpen ? "flex" : "none" }}
+        >
+          <NavLink to="/" className="" onClick={toggleTouchNavMenu}>
+            <AiOutlineHome className="bx bxs-home text-5xl" />
+          </NavLink>
 
-        <NavLink to="/Handys" className="text-3xl" onClick={toggleTouchNavMenu}>
-          Handys
-        </NavLink>
-        <NavLink
-          to="/Laptops"
-          className="text-3xl"
-          onClick={toggleTouchNavMenu}
-        >
-          Laptops
-        </NavLink>
-        <NavLink
-          to="/consoles"
-          className="text-3xl"
-          onClick={toggleTouchNavMenu}
-        >
-          Konsolen
-        </NavLink>
-        <NavLink
-          to="/Gadgets"
-          className="text-3xl"
-          onClick={toggleTouchNavMenu}
-        >
-          Zubehör
-        </NavLink>
-      </div>
+          <NavLink
+            to="/Handys"
+            className="text-3xl"
+            onClick={toggleTouchNavMenu}
+          >
+            Handys
+          </NavLink>
+          <NavLink
+            to="/Laptops"
+            className="text-3xl"
+            onClick={toggleTouchNavMenu}
+          >
+            Laptops
+          </NavLink>
+          <NavLink
+            to="/consoles"
+            className="text-3xl"
+            onClick={toggleTouchNavMenu}
+          >
+            Konsolen
+          </NavLink>
+          <NavLink
+            to="/Gadgets"
+            className="text-3xl"
+            onClick={toggleTouchNavMenu}
+          >
+            Zubehör
+          </NavLink>
+        </div>
+      </TransparentBackground>
     </div>
   )
 }
