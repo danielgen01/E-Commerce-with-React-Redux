@@ -1,11 +1,12 @@
 import React from "react"
 import Imagebanner from "./Homepage components/ImageBanner"
-
+import ProductOverview from "./Homepage components/ProductOverview"
 
 const Homepage: React.FC = () => {
   return (
     <>
-     <Imagebanner />
+      <Imagebanner />
+      <ProductOverview />
     </>
   )
 }
