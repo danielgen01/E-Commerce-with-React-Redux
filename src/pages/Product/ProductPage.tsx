@@ -32,8 +32,9 @@ const ProductPage: React.FC = () => {
   
   return (
     <div className="product-page">
-      <div className=" grid grid-cols-1 lg:grid-cols-4 justify-center items-center mt-20">
-        <div className="image-ctn flex  items-center w-screen lg:w-auto justify-center col-span-2 ">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center mt-20 h-3/4">
+        <div className="grid-item-2 image-ctn flex flex-col items-center w-screen lg:w-auto justify-center  ">
+        <h1 className="text-2xl font-bold product-name text-white">{product.name} </h1>
           <img
             // ref={imageRef}
             src={product.imageSrc}
@@ -42,12 +43,12 @@ const ProductPage: React.FC = () => {
             className="h-[20rem]"
           />
         </div>
-        <div className=" text-white flex flex-col items-center gap-5  col-span-2">
-          <h1 className="text-2xl font-bold product-name">{product.name} </h1>
-          <h1 className="text-2xl font-bold">{product.price}€</h1>
+        <div className="grid-item-2 flex flex-col gap-5 items-center justify-center">
+          
+          <h1 className="text-4xl font-bold text-white">{product.price}€</h1>
           <div className=" border-b border-white/80 lg:w-1/2 w-full text-left"></div>{" "}
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center buttons gap-5 justify-center">
-            <div className="item-quantity flex items-center justify-center gap-5 text-4xl h-full  text-white  rounded">
+         
+            {/* <div className="item-quantity flex items-center justify-center gap-5 text-4xl h-full  text-white  rounded">
               <AiOutlineMinusCircle
                 className=" cursor-pointer rounded"
                 // onClick={decreaseQuantity}
@@ -62,22 +63,23 @@ const ProductPage: React.FC = () => {
                 className="bx bxs-plus-circle text-white cursor-pointer"
                 // onClick={increaseQuantity}
               />
-            </div>
-            <div className="addcart-button">
+            </div> */}
+            
               <button
-                className="text-black font-bold text-xl bg-sky-500 px-5 py-4 rounded 
+                className="text-black font-bold text-xl bg-sky-500 py-4 rounded px-10
         hover:bg-white hover:text-black active:scale-110 ease-in-out
         "
                 // onClick={addCart}
               >
                 In den Einkaufswagen
               </button>
-            </div>
-          </div>
+            
+          
         </div>
       </div>
       <div className=" border-b border-white/80  w-full text-left mt-10 mb-5"></div>{" "}
-      <div className="product-decription-ctn hidden lg:block">
+
+      <div className="product-decription-ctn ">
         <div
           className="chevron flex items-center gap-2 mx-1 cursor-pointer justify-center"
             onClick={toggleDescription}
