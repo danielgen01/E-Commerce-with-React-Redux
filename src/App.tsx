@@ -10,6 +10,7 @@ import LaptopsPage from './pages/Laptops/LaptopsPage';
 import HandysPage from './pages/Handys/HandysPage';
 import GadgetsPage from './pages/Gadgets/GadgetsPage';
 import ProductPage from './pages/Product/ProductPage';
+import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
             path="/Gadgets"
             element={<GadgetsPage />}
           ></Route>
-          {/* <Route path="/Cart" element={<Cart />}></Route> */}
+          <Route path="/Cart" element={<Cart />}></Route>
           <Route path="/items/:id" element={<ProductPage />}></Route>
         </Routes>
       </BrowserRouter>
