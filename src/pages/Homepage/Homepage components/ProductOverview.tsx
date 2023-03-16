@@ -8,12 +8,12 @@ const ProductOverview: React.FC = () => {
       className="grid grid-cols-1 justify-center  mt-20 mb-20 overflow-hidden
       sm:grid-cols-2 
       lg:grid-cols-4"
-    //   data-aos="fade-left"
-    //   data-aos-duration="500"
-    //   data-aos-easing="ease-in-out"
-    //   data-aos-mirror="true"
-    //   data-aos-once="true"
-    //   data-aos-anchor-placement="top-center"
+      data-aos="fade-left"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
     >
       <Link to="/Handys" className="active:scale-110 ease-in-out duration-75 ">
         <div
