@@ -8,8 +8,8 @@ const Imagebanner: React.FC = () => {
         className="
       background-wrapper 
       flex flex-col justify-start items-center 
-      bg-black h-3/4  py-20 lg:py-40 
-
+      bg-black   py-20 lg:py-40 
+      h-screen
       lg:flex-row lg:items-start"
       
       >
