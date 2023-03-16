@@ -1,7 +1,7 @@
-import { TopRightIcons } from "./TopRightIcons"
+import { TopRightIcons } from "./NavbarComponents/TopRightIcons"
 import React from "react"
-import MobileNavMenu from "./MobileNav"
-import DesktopNavMenu from "./DesktopNav"
+import MobileNavMenu from "./NavbarComponents/MobileNav"
+import DesktopNavMenu from "./NavbarComponents/DesktopNav"
 
 const Navbar: React.FC = () => {
   return (
