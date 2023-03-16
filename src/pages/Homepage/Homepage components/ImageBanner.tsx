@@ -43,7 +43,7 @@ const Imagebanner: React.FC = () => {
       "
         >
           <h1
-            className="text-white font-bold text-3xl
+            className="text-white font-bold text-3xl text-center
         sm:text-4xl
         md:text-5xl
         lg:text-6xl
