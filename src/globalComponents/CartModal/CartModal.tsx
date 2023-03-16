@@ -16,7 +16,7 @@ const CartModal: React.FC = () => {
   }
   return (
     <>
-      <TranspBack style={{ display: isCartModalOpen ? "flex" : "none" }}>
+      <TranspBack style={{ display: isCartModalOpen ? "flex" : "none" }} onClick={handleCloseModalClick}>
         <div
           className="cart-modal h-[400px] w-[400px] bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default"
           style={{ display: isCartModalOpen ? "flex" : "none" }}
