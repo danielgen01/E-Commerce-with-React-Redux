@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "Navbar-grey":"#0d0d0d",
+        
+      },
+      
       animation: {
         'menu-slide': 'menu-slide 500ms ease-in-out',
         
