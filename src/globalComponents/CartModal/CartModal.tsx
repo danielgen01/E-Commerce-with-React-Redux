@@ -21,7 +21,7 @@ const CartModal: React.FC = () => {
         onClick={handleCloseModalClick}
       >
         <div
-          className="cart-modal h-[400px] w-[400px] bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default"
+          className="cart-modal h-[400px] w-[400px] bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default z-50"
           style={{ display: isCartModalOpen ? "flex" : "none" }}
         >
           <AiOutlineClose className="text-5xl ml-auto cursor-pointer" />
