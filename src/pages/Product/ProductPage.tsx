@@ -4,6 +4,7 @@ import products from "../../app/products.json"
 import { FaChevronUp } from "react-icons/fa"
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai"
 import { BiCartAdd } from "react-icons/bi"
+import {BsFillCartPlusFill} from "react-icons/bs"
 
 
 
@@ -32,7 +33,7 @@ const ProductPage: React.FC = () => {
   
   return (
     <div className="product-page">
-      <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center mt-20 h-3/4">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center mt-20 h-3/4 ">
         <div className="grid-item-2 image-ctn flex flex-col items-center w-screen lg:w-auto justify-center  ">
         <h1 className="text-2xl font-bold product-name text-white">{product.name} </h1>
           <img
@@ -67,10 +68,10 @@ const ProductPage: React.FC = () => {
             
               <button
                 className="text-black font-bold text-xl bg-sky-500 py-4 rounded px-10
-        hover:bg-white hover:text-black active:scale-110 ease-in-out
+        hover:bg-white hover:text-black active:scale-110 ease-in-out flex items-center gap-3
         "
                 // onClick={addCart}
-              >
+              ><BsFillCartPlusFill />
                 In den Einkaufswagen
               </button>
             
