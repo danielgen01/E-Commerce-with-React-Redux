@@ -29,52 +29,7 @@ const ProductPage: React.FC = () => {
     setIsDescriptionOpen(!isDescriptionOpen)
   }
 
-  //   const increaseQuantity = () => {
-  //     if (product.quantity < 5) {
-  //       product.quantity += 1
-  //       setCartItems((prevCartItems: any) => [...prevCartItems])
-  //     }
-  //   }
-
-  //   const decreaseQuantity = () => {
-  //     if (product.quantity >= 2) {
-  //       product.quantity -= 1
-  //       setCartItems((prevCartItems: any) => [...prevCartItems])
-  //     }
-  //   }
-
-  //   const addCart = (event: React.MouseEvent<HTMLElement>) => {
-  //     const parent: any = event.currentTarget.parentElement
-  //     const newParent = parent.parentElement
-  //     const grandParent = newParent.parentElement
-
-  //     const title = grandParent.children[0].innerHTML
-  //     const price = grandParent.children[2].innerHTML
-  //     const imageSrc = imageRef.current.src
-  //     const value = newParent.children[0].children[1].value
-
-  //     // make a variable for existing cart items
-  //     const existingItem: CartItem | undefined = cartItems.find(
-  //       (item: { title: string; quantity: number }) => item.title === title
-  //     )
-
-  //     // checks if product already in cart
-
-  //     if (existingItem) {
-  //      alert("Product already in Cart ")
-  //     } else {
-  //       setCartItems((prevCartItems: any) => [
-  //         ...prevCartItems,
-  //         {
-  //           title: title,
-  //           image: imageSrc,
-  //           price: price,
-  //           quantity: value,
-  //         },
-  //       ])
-  //     }
-  //   }
-
+  
   return (
     <div className="product-page">
       <div className=" grid grid-cols-1 lg:grid-cols-4 justify-center items-center mt-20">
@@ -128,7 +83,7 @@ const ProductPage: React.FC = () => {
             onClick={toggleDescription}
         >
           <FaChevronUp
-            className={`text-white text-xl lg:text-3xl ${
+            className={`text-white text-xl lg:text-3xl  duration-500 ${
               isDescriptionOpen ? "rotate-180" : ""
             }`}
           />
