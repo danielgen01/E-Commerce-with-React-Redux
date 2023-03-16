@@ -1,0 +1,322 @@
+[
+    {
+        "name":"iPhone 14 Pro Max",
+        "imageSrc":"../images/HandysImages/iPhone-14-Pro-Max.png",
+        "price":1499,
+        "quantity": 1,
+        "id": "iPhone 14 Pro Max",
+        "brand":"Apple",
+        "category" :"phones"
+    },
+
+    {
+        "name":"iPhone 14",
+        "imageSrc":"../images/HandysImages/iPhone-14.png",
+        "price":999,
+        "quantity": 1,
+        "id": "iPhone 14",
+        "brand":"Apple",
+        "category" :"phones"
+    },
+
+    {
+        "name":"iPhone 13",
+        "imageSrc":"../images/HandysImages/iPhone 13.png",
+        "price":699,
+        "quantity": 1,
+        "id": "iPhone 13",
+        "brand":"Apple",
+        "category" :"phones"
+    },
+
+    {
+        "name":"iPhone 12",
+        "imageSrc":"../images/HandysImages/iPhone 12.png",
+        "price":599,
+        "quantity": 1,
+        "id": "iPhone 12",
+        "brand":"Apple",
+        "category" :"phones"
+    },
+
+    {
+        "name":"iPhone SE 2022",
+        "imageSrc":"../images/HandysImages/iPhone Se 3.Gen.png",
+        "price":399,
+        "quantity": 1,
+        "id": "iPhone SE 2022",
+        "brand":"Apple",
+        "category" :"phones"
+    },
+
+    {
+        "name":"iPhone X 64GB",
+        "imageSrc":"../images/HandysImages/iPhone-X.png",
+        "price":439,
+        "quantity": 1,
+        "id": "iPhone X 64GB",
+        "brand":"Apple",
+        "category" :"phones"
+    },
+
+    {
+        "name":"iPhone 11",
+        "imageSrc":"../images/HandysImages/iphone11.png",
+        "price":469,
+        "quantity": 1,
+        "id": "iPhone 11",
+        "brand":"Apple",
+        "category" :"phones"
+    },
+
+    {
+        "name":"Galaxy S23 Ultra",
+        "imageSrc":"../images/HandysImages/s23ultra.png",
+        "price":859,
+        "quantity": 1,
+        "id": "Galaxy S23 Ultra",
+        "brand":"Samsung",
+        "category" :"phones"
+    },
+
+    {
+        "name":"Galaxy S22",
+        "imageSrc":"../images/HandysImages/s22.png",
+        "price":699,
+        "quantity": 1,
+        "id": "Galaxy S22",
+        "brand":"Samsung",
+        "category" :"phones"
+    },
+
+    {
+        "name":"Galaxy Z Flip 4",
+        "imageSrc":"../images/HandysImages/z flip4.png",
+        "price":479,
+        "quantity": 1,
+        "id": "Galaxy Z Flip 4",
+        "brand":"Samsung",
+        "category" :"phones"
+    },
+
+    {
+        "name":"Nintendo Switch neon",
+        "imageSrc":"/images/KonsolenImages/nintendoswitch.png",
+        "price":299,
+        "quantity": 1,
+        "id": "Nintendo Switch neon",
+        "brand":"Nintendo",
+        "category":"consoles"
+    },
+
+    {
+        "name":"PS5 Digital + GoW Bundle",
+        "imageSrc":"../images/KonsolenImages/ps5digital.png",
+        "price":519,
+        "quantity": 1,
+        "id": "PS5 Digital + GoW Bundle",
+        "brand":"Sony",
+        "category":"consoles"
+    },
+
+    {
+        "name":"XBOX Series S",
+        "imageSrc":"../images/KonsolenImages/xboxSeriesS.png",
+        "price":299,
+        "quantity": 1,
+        "id": "XBOX Series S",
+        "brand":"Microsoft",
+        "category":"consoles"
+    },
+
+    {
+        "name":"PS4",
+        "imageSrc":"../images/KonsolenImages/ps4.png",
+        "price":299,
+        "quantity": 1,
+        "id": "PS4",
+        "brand":"Sony",
+        "category":"consoles"
+    },
+
+    {
+        "name":"PS5 Disc + GoW",
+        "imageSrc":"../images/KonsolenImages/ps5disc.png",
+        "price":619,
+        "quantity": 1,
+        "id": "PS5 Disc + GoW Bundle",
+        "brand":"Sony",
+        "category":"consoles"
+    },
+
+    {
+        "name":"XBOX Series X + Forza",
+        "imageSrc":"../images/KonsolenImages/xboxseriesx.png",
+        "price":599,
+        "quantity": 1,
+        "id": "XBOX Series X + Forza",
+        "brand":"Microsoft",
+        "category":"consoles"
+    },
+
+    {
+        "name":"MacBook Pro 16 M2 (2023)",
+        "imageSrc":"../images/MacBooksImages/mac1.png",
+        "price":2659,
+        "quantity": 1,
+        "id": "MacBook Pro 16 M2 (2023)",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"MacBook Pro 2021 M1 Pro 10-Core",
+        "imageSrc":"../images/MacBooksImages/mac2.png",
+        "price":2222,
+        "quantity": 1,
+        "id": "MacBook Pro 2021 M1 Pro 10-Core",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"MacBook Pro 2021 M1 Max 10-Core",
+        "imageSrc":"../images/MacBooksImages/mac3.png",
+        "price":3099,
+        "quantity": 1,
+        "id": "MacBook Pro 2021 M1 Max 10-Core",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"MacBook Pro 2022 M2",
+        "imageSrc":"../images/MacBooksImages/mac4.png",
+        "price":1371,
+        "quantity": 1,
+        "id": "MacBook Pro 2022 M2",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"MacBook Pro M2 (2023)",
+        "imageSrc":"../images/MacBooksImages/mac5.png",
+        "price":2098,
+        "quantity": 1,
+        "id": "MacBook Pro M2 (2023)",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"MacBook Air 2022 M2",
+        "imageSrc":"../images/MacBooksImages/mac6.png",
+        "price":1255,
+        "quantity": 1,
+        "id": "MacBook Air 2022 M2",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"MacBook Pro 2019",
+        "imageSrc":"../images/MacBooksImages/mac7.png",
+        "price":1389,
+        "quantity": 1,
+        "id": "MacBook Pro 2019",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"MacBook Pro 2020 M1",
+        "imageSrc":"../images/MacBooksImages/mac8.png",
+        "price":1249,
+        "quantity": 1,
+        "id": "MacBook Pro 2020 M1",
+        "brand": "Apple",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"Acer Nitro 5 (AN517-54-794W)",
+        "imageSrc":"../images/MacBooksImages/AcerNitro5.png",
+        "price":1299,
+        "quantity": 1,
+        "id": "Acer Nitro 5 (AN517-54-794W)",
+        "brand": "Acer",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"Acer Swift 3 (SF314-43-R0JE)",
+        "imageSrc":"../images/MacBooksImages/AcerSwift3.png",
+        "price":469,
+        "quantity": 1,
+        "id": "Acer Swift 3 (SF314-43-R0JE)",
+        "brand": "Acer",
+        "category":"laptops"
+    }
+    ,
+
+    {
+        "name":"Acer Predator Helios 16 (PH16-71-731Q)",
+        "imageSrc":"../images/MacBooksImages/AcerPredator.png",
+        "price":2099,
+        "quantity": 1,
+        "id": "Acer Predator Helios 16 (PH16-71-731Q)",
+        "brand": "Acer",
+        "category":"laptops"
+
+    },
+
+    {
+        "name":"AirPods (2016)",
+        "imageSrc":"../images/gadgetsImages/Airpods 1.Gen.png",
+        "price":129,
+        "quantity": 1,
+        "id": "AirPods (2016)",
+        "brand":"Apple",
+        "category":"gadgets"
+    },
+
+    {
+        "name":"AirPods 3 (2021) mit Ladecase",
+        "imageSrc":"../images/gadgetsImages/Airpods 3.Gen.png",
+        "price":219,
+        "quantity": 1,
+        "id": "AirPods 3 (2021) mit Ladecase",
+        "brand":"Apple",
+        "category":"gadgets"
+    },
+
+    {
+        "name":"Kabel USB-C auf Lightning",
+        "imageSrc":"../images/gadgetsImages/USBC.png",
+        "price":25,
+        "quantity": 1,
+        "id": "Kabel USB-C auf Lightning",
+        "brand":"Apple",
+        "category":"gadgets"
+    },
+
+    {
+        "name":"MagSafe Ladegerät 15W",
+        "imageSrc":"../images/gadgetsImages/MagSafe.png",
+        "price": 50,
+        "quantity": 1,
+        "id": "MagSafe Ladegerät 15W",
+        "brand":"Apple",
+        "category":"gadgets"
+    }
+]
