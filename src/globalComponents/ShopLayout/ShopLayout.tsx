@@ -9,12 +9,21 @@ interface Item {
   price: number
   imageSrc: string
   id: string
+  category: string
+  
+}
+
+interface Props {
+  category:string
 }
 
 
 
-const ShopLayout: React.FC = () => {
-  const productList = products.map((product: Item) => (
+
+const ShopLayout: React.FC<Props> = ({category}) => {
+  const specificCategory = products.filter((product: Item) => product.category === category)
+
+  const productList = specificCategory.map((product: Item) => (
     <Link to={`/items/${product.id}`}>
       <div
         key={Math.floor(Math.random() * 20000)}
