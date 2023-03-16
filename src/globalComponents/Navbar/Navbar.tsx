@@ -6,7 +6,7 @@ import DesktopNavMenu from "./NavbarComponents/DesktopNav"
 const Navbar: React.FC = () => {
   return (
     <div
-      className="bg-slate-600 h-24 flex justify-between items-center text-white font-semibold w-full "
+      className="h-24 flex justify-between items-center text-white font-semibold w-full "
       data-aos="fade-right"
       data-aos-duration="500"
       data-aos-easing="ease-out"
