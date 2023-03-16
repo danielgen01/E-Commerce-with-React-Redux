@@ -4,7 +4,7 @@ import { CgProfile } from "react-icons/cg"
 import { AiOutlineShopping } from "react-icons/ai"
 import { RootState } from "../../../app/store"
 import { useAppDispatch, useAppSelector } from "../../../app/hooks"
-import { toggleCartModal } from "../../../features/OpenCartModal/cartModalSlice"
+import { toggleCartModal } from "../../../features/CartModal/cartModalReducer"
 
 export const TopRightIcons: React.FC = () => {
   const dispatch = useAppDispatch()

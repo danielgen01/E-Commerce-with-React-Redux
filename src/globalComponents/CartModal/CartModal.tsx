@@ -1,7 +1,7 @@
 import React from "react"
 import { RootState } from "../../app/store"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { toggleCartModal } from "../../features/OpenCartModal/cartModalSlice"
+import { toggleCartModal } from "../../features/CartModal/cartModalReducer"
 import { AiOutlineClose, AiOutlineArrowRight } from "react-icons/ai"
 import TransparentBackground from "../TransparentBackground/TransparentBackground"
 import { Link } from "react-router-dom"

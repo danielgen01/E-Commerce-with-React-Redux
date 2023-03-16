@@ -9,7 +9,7 @@ const initialState: CartModalState = {
 };
 
 const cartModalSlice = createSlice({
-  name: 'cartModal',
+  name: 'cartModalReducer',
   initialState,
   reducers: {
     toggleCartModal: (state) => {
