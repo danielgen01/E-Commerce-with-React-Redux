@@ -14,6 +14,12 @@ const cartModalSlice = createSlice({
   reducers: {
     toggleCartModal: (state) => {
       state.isCartModalOpen = !state.isCartModalOpen;
+      
+      if (state.isCartModalOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     },
     
   },

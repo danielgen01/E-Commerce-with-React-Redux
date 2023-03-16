@@ -15,6 +15,7 @@ const CartModal: React.FC = () => {
   const handleCloseModalClick = () => {
     dispatch(toggleCartModal())
   }
+  
   return (
     <>
       <TranspBack
