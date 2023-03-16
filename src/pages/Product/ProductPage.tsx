@@ -2,21 +2,38 @@ import React, { useState, useRef } from "react"
 import { useParams } from "react-router-dom"
 import products from "../../app/products.json"
 import { FaChevronUp } from "react-icons/fa"
-import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai"
-import { BiCartAdd } from "react-icons/bi"
 import {BsFillCartPlusFill} from "react-icons/bs"
+import { useAppDispatch,useAppSelector } from "../../app/hooks"
+import { addItem } from "../../features/Cart/CartReducer"
 
 
 
-type CartItem = {
-  title: string
-  price: number
-  quantity: number
-  image: string
+
+interface Item {
   id: string
+  name: string
+  price: number
+  imageSource: string
 }
 
 const ProductPage: React.FC = () => {
+
+  const dispatch = useAppDispatch()
+  const cartItems = useAppSelector((state: any) => state.cart.items)
+
+  const handleAddItem = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const target = event.target as HTMLButtonElement;
+    const newItem: Item = {
+      id: target.dataset.id!,
+      name: target.dataset.name!,
+      price: parseInt(target.dataset.price!),
+      imageSource: target.dataset.image!
+    };
+    dispatch(addItem(newItem));
+  }
+  
+
+
   const [isDescriptionOpen, setIsDescriptionOpen] = useState<boolean>(false)
 
   const { id } = useParams<{ id: string }>()
@@ -49,28 +66,12 @@ const ProductPage: React.FC = () => {
           <h1 className="text-4xl font-bold text-white">{product.price}€</h1>
           <div className=" border-b border-white/80 lg:w-1/2 w-full text-left"></div>{" "}
          
-            {/* <div className="item-quantity flex items-center justify-center gap-5 text-4xl h-full  text-white  rounded">
-              <AiOutlineMinusCircle
-                className=" cursor-pointer rounded"
-                // onClick={decreaseQuantity}
-              />
-              <input
-                type="number"
-                value={product.quantity}
-                className=" cursor-default w-[100px] text-center outline-none bg-black"
-                readOnly={true}
-              />
-              <AiOutlinePlusCircle
-                className="bx bxs-plus-circle text-white cursor-pointer"
-                // onClick={increaseQuantity}
-              />
-            </div> */}
             
               <button
                 className="text-black font-bold text-xl bg-sky-500 py-4 rounded px-10
         hover:bg-white hover:text-black active:scale-110 ease-in-out flex items-center gap-3
         "
-                // onClick={addCart}
+                onClick={handleAddItem}
               ><BsFillCartPlusFill />
                 In den Einkaufswagen
               </button>

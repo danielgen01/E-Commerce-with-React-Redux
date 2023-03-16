@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 const CartModal: React.FC = () => {
   const dispatch = useAppDispatch()
   const isCartModalOpen = useAppSelector(
-    (state: RootState) => state.cartModalSlice.isCartModalOpen
+    (state: RootState) => state.cartModalReducer.isCartModalOpen
   )
 
   const handleCloseModalClick = () => {

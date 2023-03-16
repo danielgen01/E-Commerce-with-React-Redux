@@ -10,25 +10,27 @@ interface Item {
   imageSrc: string
   id: string
   category: string
-  
 }
 
 interface Props {
-  category:string
-  pageTitle:string
+  category: string
+  pageTitle: string
 }
 
-
-
-
-const ShopLayout: React.FC<Props> = ({category, pageTitle}) => {
-  const specificCategory = products.filter((product: Item) => product.category === category)
+const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
+  const specificCategory = products.filter(
+    (product: Item) => product.category === category
+  )
 
   const productList = specificCategory.map((product: Item) => (
     <Link to={`/items/${product.id}`}>
       <div
-        key={Math.floor(Math.random() * 20000)}
+        key={product.id}
         className="grid-item flex flex-col items-center bg-Navbar-grey"
+        data-id={product.id}
+        data-name={product.name}
+        data-price={product.price}
+        data-image={product.imageSrc}
       >
         <h2 className="text-white text-lg font-medium">{product.name}</h2>
         <img
@@ -56,12 +58,12 @@ const ShopLayout: React.FC<Props> = ({category, pageTitle}) => {
   return (
     <>
       <div
-        // data-aos="zoom-in"
-        // data-aos-duration="500"
-        // data-aos-easing="ease-in-out"
-        // data-aos-mirror="true"
-        // data-aos-once="false"
-        // data-aos-anchor-placement="top-center"
+      // data-aos="zoom-in"
+      // data-aos-duration="500"
+      // data-aos-easing="ease-in-out"
+      // data-aos-mirror="true"
+      // data-aos-once="false"
+      // data-aos-anchor-placement="top-center"
       >
         <div
           className="relevance-filter 

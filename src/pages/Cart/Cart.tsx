@@ -1,49 +1,30 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
+import { useAppDispatch,useAppSelector } from "../../app/hooks"
 
 
-type CartItem = {
-  title: string
+
+
+interface Item {
+  id: string
+  name: string
   price: number
-  quantity: number
-  image: string
+  imageSource: string
 }
 
 const Cart: React.FC = () => {
-    
-//   useEffect(() => {
-//     if (window.location.pathname === "/Cart" && cartItems.length < 1) {
-//       setTimeout(() => {
-//         window.location.href = "/"
-//       }, 1000)
-//     }
-//   }, [cartItems])
+    const dispatch = useAppDispatch()
+    // const cartItems = useAppSelector((state: any) => state.cart.items)
 
-//   const handleRemoveFromCart = (index: number) => {
-//     const updatedCart = cartItems.filter((product: any, i: any) => i !== index)
-//     setCartItems(updatedCart)
-//     setCartCount((prevCount: number) => prevCount -=1);
-//   }
+   
 
-//   const increaseQuantity = (item: CartItem) => {
-//     if (item.quantity < 5) {
-//       item.quantity = Number(item.quantity) + 1
-//       setCartItems((prevCartItems: any) => [...prevCartItems])
-//     }
-//   }
-
-//   const decreaseQuantity = (item: CartItem) => {
-//     if (item.quantity >= 2) {
-//       item.quantity -= 1
-//       setCartItems((prevCartItems: any) => [...prevCartItems])
-//     }
-//   }
 
   function handleBuyClick() {
     alert("This shop is unfortunately not a real business")
   }
 
   return (
+    <>
     <div className="cart-body bg-black min-h-screen">
       <div className="cart-headline h-[10%] font-bold flex justify-center">
         <h1 className="text-3xl text-white">Dein Warenkorb</h1>
@@ -74,8 +55,10 @@ const Cart: React.FC = () => {
 
       <div className="grid-wrapper grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
         <div className="h-[50%] cart-items xl:col-span-3 lg:col-span-2 ">
-         {/*  <ul className="flex flex-col mx-1 gap-5 itemscolumn lg:items-center">
-            {cartItems.map((item: any, index: any) => (
+          {/* {cartItems.length > 0 && 
+          <> 
+          <ul className="flex flex-col mx-1 gap-5 itemscolumn lg:items-center">
+            {cartItems.map((item: Item, index: any) => (
               <>
                 <li
                   key={Math.floor(Math.random() * 20000000)}
@@ -83,18 +66,18 @@ const Cart: React.FC = () => {
                 >
                   <div className="image-div w-3/6 h-full flex flex-col gap-5 justify-center items-center rounded">
                     <img
-                      src={item.image}
+                      src={item.imageSource}
                       className="w-full h-auto lg:w-2/3"
-                      alt={item.title}
-                      title={item.title}
+                      alt={item.name}
+                      title={item.name}
                     />
                     <div className="product-details  flex flex-col justify-center text-center gap-2">
                     <h2 className="text-white text-md lg:text-xl font-semibold ">
-                      {item.title}
+                      {item.name}
                     </h2>
                     <h2
                       className=" text-sm lg:text-xl cursor-pointer text-sky-500 underline hover:font-bold"
-                      onClick={() => handleRemoveFromCart(index)}
+                      
                     >
                       Entfernen
                     </h2>
@@ -110,12 +93,12 @@ const Cart: React.FC = () => {
                   <div className="item-quantity flex items-center justify-center gap-1 text-3xl w-1/6">
                     <i
                       className="bx bxs-minus-circle text-white cursor-pointer"
-                      onClick={() => decreaseQuantity(item)}
+                     
                     ></i>
-                    <h3 className="text-white">{item.quantity}</h3>
+                    <h3 className="text-white">1</h3>
                     <i
                       className="bx bxs-plus-circle text-white cursor-pointer"
-                      onClick={() => increaseQuantity(item)}
+                      
                     ></i>
                   </div>
                   <div className="delete-btn w-[20%] flex justify-start"></div>
@@ -124,7 +107,11 @@ const Cart: React.FC = () => {
               </>
             ))}
           </ul> 
-        </div>*/}
+          </>} */}
+
+        </div>
+
+
 
         <div className="übersicht bg-[#1d2021] mx-5 h-[300px] mt-10 rounded">
           <div className="übersicht content mx-5 flex flex-col gap-5 mt-5">
@@ -153,8 +140,8 @@ const Cart: React.FC = () => {
         </div>
       </div>
     </div>
-    </div>
-  )
+    
+  </>)
 }
 
 
