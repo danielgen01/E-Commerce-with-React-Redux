@@ -23,14 +23,6 @@ const Cart: React.FC = () => {
     dispatch(removeItem(item))
   }
 
-  useEffect(() => {
-    if (window.location.pathname === "/Cart" && cartItems.length < 1) {
-      setTimeout(() => {
-        window.location.href = "/"
-      }, 5000)
-    }
-  }, [cartItems])
-
   const totalCost = calculateTotal(cartItems)
 
   function handleBuyClick() {
