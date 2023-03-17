@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import FilterSectionDesktop from "./FilterSectionDesktop"
 import FilterSectionTouch from "./FilterSectionTouch"
 import { Link } from "react-router-dom"
@@ -18,11 +18,23 @@ interface Props {
 }
 
 const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
+  const [selectedValue, setSelectedValue] = useState('');
+
   const specificCategory = products.filter(
     (product: Item) => product.category === category
   )
 
-  const productList = specificCategory.map((product: Item) => (
+  const sortedList = specificCategory.slice().sort((a, b) => {
+    if (selectedValue === 'price-max') {
+      return b.price - a.price;
+    } else if (selectedValue === 'price-min') {
+      return a.price - b.price;
+    } else {
+      return 0; // keine Änderung
+    }
+  });
+
+  const productList = sortedList.map((product: Item) => (
     <Link to={`/items/${product.id}`}>
       <div
         key={product.id}
@@ -70,7 +82,9 @@ const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
     hidden lg:flex justify-end mr-10"
         >
           <form className="outline-none">
-            <select className="px-4 py-3 rounded outline-none border-none text-white bg-black cursor-pointer font-medium">
+            <select 
+            className="px-4 py-3 rounded outline-none border-none text-white bg-black cursor-pointer font-medium"
+            onChange={(e) => setSelectedValue(e.target.value)}>
               <option value="relevanz">Relevanz</option>
               <option value="price-max">Preis (absteigend)</option>
               <option value="price-min">Preis (aufsteigend)</option>
