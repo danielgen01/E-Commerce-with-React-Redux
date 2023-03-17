@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useAppDispatch,useAppSelector } from "../../app/hooks"
 import { RootState } from "../../app/store"
 import { removeItem, Item, calculateTotal } from "../../features/Cart/CartReducer"
+import {AiOutlinePlus, AiOutlineMinus} from "react-icons/ai"
 
 
 
@@ -88,22 +89,17 @@ const Cart: React.FC = () => {
                   </div>
                   <div className=" flex justify-center">
                     <h3 className="text-white font-semibold text-md">
-                      {item.price}
+                      {item.price}€
                     </h3>
                   </div>
                   </div>
                   
                  
-                  <div className="item-quantity flex items-center justify-center gap-1 text-3xl w-1/6">
-                    <i
-                      className="bx bxs-minus-circle text-white cursor-pointer"
-                     
-                    ></i>
+                  <div className="item-quantity flex items-center justify-between text-3xl w-1/6 border-sky-500 border-2 rounded-md">
+                  <AiOutlineMinus className="text-white"/>
                     <h3 className="text-white">1</h3>
-                    <i
-                      className="bx bxs-plus-circle text-white cursor-pointer"
-                      
-                    ></i>
+                    <AiOutlinePlus className="text-white"/>
+                    
                   </div>
                   
                   <div className="delete-btn w-[20%] flex justify-start"></div>
