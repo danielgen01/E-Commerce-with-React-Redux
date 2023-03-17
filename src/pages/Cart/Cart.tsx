@@ -64,7 +64,16 @@ const Cart: React.FC = () => {
         </div>
 
         <div className="grid-wrapper grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
-          <div className="h-[50%] cart-items xl:col-span-3 lg:col-span-2 ">
+          <div className="h-[50%] cart-items xl:col-span-3 lg:col-span-2 mt-5">
+            <div className=" w-full flex justify-center">
+            <table className="border-2 border-white rounded-md lg:w-3/4 w-full">
+              <tr className="text-white text-2xl">
+                <th>Artikel</th>
+                <th>Menge</th>
+                <th>Preis</th>
+              </tr>
+            </table>
+            </div>
             {cartItems.length > 0 && (
               <>
                 <ul className="flex flex-col mx-1 gap-5 itemscolumn lg:items-center">
@@ -72,9 +81,9 @@ const Cart: React.FC = () => {
                     <>
                       <li
                         key={item.id}
-                        className="flex flex-row items-center py-5 single-itemRow w-auto lg:w-3/4 h-auto  gap-2"
+                        className="flex flex-row items-between py-5 single-itemRow w-auto lg:w-3/4 h-auto  gap-2 bg-Navbar-grey"
                       >
-                        <div className="image-div w-3/6 h-full flex flex-col gap-5 justify-center items-center rounded">
+                        <div className="image-div w-1/3 h-full flex flex-col gap-5 justify-center items-center rounded">
                           <Link
                             to={`/items/${item.id}`}
                             className="flex flex-col items-center justify-center"
@@ -104,13 +113,28 @@ const Cart: React.FC = () => {
                           </div>
                         </div>
 
-                        <div className="item-quantity flex items-center justify-between text-3xl w-1/6 border-sky-500 border-2 rounded-md">
+                        <div className="item-quantity-ctn w-1/3
+                          text-xl lg:text-3xl flex items-center justify-center">
+
+                            <div className="item-quantity
+                             flex items-center justify-between w-1/2
+                               border-sky-500 border-2 rounded-md">
                           <AiOutlineMinus className="text-white" />
-                          <h3 className="text-white">1</h3>
+                          <input type="number"  defaultValue={1} readOnly={true} 
+                          className="text-white bg-Navbar-grey outline-none w-2/6 cursor-default "
+                          />
                           <AiOutlinePlus className="text-white" />
                         </div>
+                        </div>
 
-                        <div className="delete-btn w-[20%] flex justify-start"></div>
+
+                        <div className="item-price-ctn flex items-center justify-center w-1/3">
+                        <div className="item-gesamt-price flex justify-center">
+                          <h4 className="text-4xl text-white">€</h4>
+                        </div>
+                        </div>
+
+                       
                       </li>
                       <div className=" border-b border-white/80 w-full lg:w-3/4 text-left"></div>{" "}
                     </>
