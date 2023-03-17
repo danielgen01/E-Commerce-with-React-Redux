@@ -23,7 +23,7 @@ const Cart: React.FC = () => {
     dispatch(removeItem(item))
   }
 
-  const totalCost = calculateTotal(cartItems)
+  const totalCost = calculateTotal(cartItems).toFixed(2)
 
   function handleBuyClick() {
     alert("This shop is unfortunately not a real business")
