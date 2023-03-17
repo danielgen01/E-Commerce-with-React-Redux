@@ -12,7 +12,7 @@ interface CartState {
 }
 
 const initialState: CartState = {
-  items: [],
+  items: JSON.parse(localStorage.getItem("cart") || "[]"),
 }
 
 export const cartSlice = createSlice({
@@ -21,12 +21,18 @@ export const cartSlice = createSlice({
   reducers: {
     addItem: (state, action: PayloadAction<Item>) => {
       state.items.push(action.payload)
+      localStorage.setItem("cart", JSON.stringify(state.items))
+
     },
     removeItem: (state, action: PayloadAction<Item>) => {
       state.items = state.items.filter((item) => item.id !== action.payload.id)
+      localStorage.setItem("cart", JSON.stringify(state.items))
+
     },
     clearCart: (state) => {
       state.items = []
+      localStorage.setItem("cart", JSON.stringify(state.items))
+
     },
   },
 })
