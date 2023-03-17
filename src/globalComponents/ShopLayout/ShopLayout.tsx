@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-import FilterSectionDesktop from "./FilterSectionDesktop"
-import FilterSectionTouch from "./FilterSectionTouch"
 import { Link } from "react-router-dom"
 import products from "../../app/products.json"
 
@@ -30,7 +28,7 @@ const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
     } else if (selectedValue === "price-min") {
       return a.price - b.price
     } else {
-      return 0 // keine Änderung
+      return 0 // no change 
     }
   })
 
@@ -86,12 +84,12 @@ const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
           </h3>
         </div>
         <div
-          className="relevance-filter 
+          className="relevance-filter mt-5 mb-5
      lg:flex justify-end mr-10"
         >
           <form className=" border-white border-2 w-1/2  lg:w-auto">
             <select
-              className="px-4 py-3 rounded outline-none border-none text-white bg-black cursor-pointer font-semibold"
+              className="px-4 py-3 rounded outline-none border-none text-white bg-black cursor-pointer font-semibold w-full"
               onChange={(e) => setSelectedValue(e.target.value)}
             >
               <option value="relevanz">Relevanz</option>
@@ -102,15 +100,13 @@ const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
         </div>
 
         <div className="shop flex flex-col lg:flex-row bg-black">
-          <div className="flex flex-col items-center lg:w-1/3 gap-4">
-            <FilterSectionDesktop />
-          </div>
+          
 
           <div
             className="shop-items
        grid grid-cols-2 gap-5
        text-center  w-11/12 ml-[2%] mr-[2%] mt-10 
-       lg:w-2/3 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2"
+       lg:w-full xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2"
           >
             {productList}
           </div>
