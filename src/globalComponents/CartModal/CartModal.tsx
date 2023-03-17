@@ -12,15 +12,15 @@ const CartModal: React.FC = () => {
   const isCartModalOpen = useAppSelector(
     (state: RootState) => state.cartModalReducer.isCartModalOpen
   )
-  const cartItems = useAppSelector((state: RootState) => state.CartReducer.items)
-
+  const cartItems = useAppSelector(
+    (state: RootState) => state.CartReducer.items
+  )
 
   const handleCloseModalClick = () => {
     dispatch(toggleCartModal())
   }
 
   const totalCost = calculateTotal(cartItems)
-
 
   return (
     <>
@@ -42,7 +42,9 @@ const CartModal: React.FC = () => {
           <h2 className="text-white font-bold  text-xl ml-3">
             DEINE BESTELLUNG:
           </h2>
-          <h2 className="text-white font-semibold text-md ">Artikel: {cartItems.length} | {totalCost}€</h2>
+          <h2 className="text-white font-semibold text-md ">
+            Artikel: {cartItems.length} | {totalCost}€
+          </h2>
         </div>
 
         <div
@@ -53,7 +55,7 @@ const CartModal: React.FC = () => {
             className="cart-items 
         flex flex-col gap-10 w-full justify-center"
           >
-             {cartItems.map((product: any) => (
+            {cartItems.map((product: any) => (
               <>
                 <li
                   key={product.id}
@@ -63,7 +65,7 @@ const CartModal: React.FC = () => {
                     "
                 >
                   <div>
-                 <img
+                    <img
                       src={product.imageSource}
                       className="w-[150px]"
                       alt="product_image"
@@ -81,25 +83,26 @@ const CartModal: React.FC = () => {
                 </li>
                 <div className=" border-b border-white/80 w-full mx-auto "></div>{" "}
               </>
-            ))} 
+            ))}
           </ul>
         </div>
 
-         {cartItems.length > 0 && (
-          <> 
-        <div className="flex justify-center items-center w-auto">
-          <Link to="/Cart">
-            <button
-              className="bg-gradient-to-r from-sky-500 to-indigo-500 py-3 px-15 w-full
+        {cartItems.length > 0 && (
+          <>
+            <div className="flex justify-center items-center w-auto">
+              <Link to="/Cart">
+                <button
+                  className="bg-gradient-to-r from-sky-500 to-indigo-500 py-3 px-15 w-full
            rounded cursor-pointer text-white hover:opacity-90 font-semibold tracking-wide flex items-center gap-2 px-2"
-              onClick={handleCloseModalClick}
-            >
-              WARENKORB ABCHECKEN <AiOutlineArrowRight className="text-3xl" />
-            </button>
-          </Link>
-        </div>
-         </>
-        )} 
+                  onClick={handleCloseModalClick}
+                >
+                  WARENKORB ABCHECKEN{" "}
+                  <AiOutlineArrowRight className="text-3xl" />
+                </button>
+              </Link>
+            </div>
+          </>
+        )}
       </div>
     </>
   )

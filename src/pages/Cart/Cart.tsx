@@ -67,14 +67,14 @@ const Cart: React.FC = () => {
                 <li
                   key={item.id}
                   className="flex flex-row items-center py-5 single-itemRow w-auto lg:w-3/4 h-auto  gap-2"
-                >
+                > 
                   <div className="image-div w-3/6 h-full flex flex-col gap-5 justify-center items-center rounded">
-                    <img
+                  <Link to={`/items/${item.id}`} className="flex flex-col items-center justify-center"><img
                       src={item.imageSource}
                       className="w-full h-auto lg:w-2/3"
                       alt={item.name}
                       title={item.name}
-                    />
+                    /></Link>
                     <div className="product-details  flex flex-col justify-center text-center gap-2">
                     <h2 className="text-white text-md lg:text-xl font-semibold ">
                       {item.name}
@@ -105,7 +105,9 @@ const Cart: React.FC = () => {
                       
                     ></i>
                   </div>
+                  
                   <div className="delete-btn w-[20%] flex justify-start"></div>
+                 
                 </li>
                 <div className=" border-b border-white/80 w-full lg:w-3/4 text-left"></div>{" "}
               </>
