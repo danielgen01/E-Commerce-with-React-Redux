@@ -43,12 +43,12 @@ const MobileNavMenu: React.FC = () => {
       <TransparentBackground
         onClick={toggleTouchNavMenu}
         style={{ display: isTouchNavMenuOpen ? "flex" : "none" }}
-      >
+      ></TransparentBackground>
         <div
           className="touch-menu-nav-links
           flex flex-col gap-10 items-center 
         py-20
-        absolute top-0 h-screen w-2/3 bg-gray-800 z-[99999999999999999999]rounded cursor-default 
+        absolute top-0 h-screen w-2/3 bg-gray-800 z-30 rounded cursor-default 
         animate-menu-slide
         "
           style={{ display: isTouchNavMenuOpen ? "flex" : "none" }}
@@ -86,7 +86,7 @@ const MobileNavMenu: React.FC = () => {
             Zubehör
           </NavLink>
         </div>
-      </TransparentBackground>
+      
     </div>
   )
 }
