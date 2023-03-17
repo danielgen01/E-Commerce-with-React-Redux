@@ -65,9 +65,10 @@ const Cart: React.FC = () => {
 
         <div className="grid-wrapper grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
           <div className="h-[50%] cart-items xl:col-span-3 lg:col-span-2 mt-5">
-            <div className=" w-full flex justify-center">
-            <table className="border-2 border-white rounded-md lg:w-3/4 w-full">
-              <tr className="text-white text-2xl">
+            <div className="cartTable mt-5
+             w-full flex justify-center">
+            <table className="border-2 border-white rounded-md lg:w-3/4 w-full ">
+              <tr className="text-white lg:text-2xl text-md">
                 <th>Artikel</th>
                 <th>Menge</th>
                 <th>Preis</th>
