@@ -129,11 +129,16 @@ const Cart: React.FC = () => {
               <h2 className="text-white">{totalCost}€</h2>
             </div>
             <div className=" border-b border-white/80 w-full text-left"></div>{" "}
+            <div className="flex justify-between text-lg font-medium">
+              <h2 className="text-white">Versand</h2>
+              <h2 className="text-white">FREE</h2>
+            </div>
+            <div className=" border-b border-white/80 w-full text-left"></div>{" "}
             <div className="gesamtsumme flex justify-between font-bold text-xl">
               <h2 className="text-white">Gesamtsumme</h2>
-              <h2 className="text-white">0€</h2>
+              <h2 className="text-white">{totalCost}€</h2>
             </div>
-            <div className="order-now flex justify-center "></div>
+            <div className="order-now flex justify-center mt-5"></div>
             <button
               className="bg-sky-500 py-4 font-bold text-lg rounded hover:opacity-90"
               onClick={handleBuyClick}
