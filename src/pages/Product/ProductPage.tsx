@@ -54,8 +54,8 @@ const ProductPage: React.FC = () => {
     }
   }
   return (
-    <div className="product-page">
-      <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center mt-20 h-3/4 ">
+    <div className="product-page bg-black min-h-screen">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center py-20 h-3/4 ">
         <div className="grid-item-2 image-ctn flex flex-col items-center w-screen lg:w-auto justify-center  ">
           <h1 className="text-2xl font-bold product-name text-white">
             {product.name}{" "}
