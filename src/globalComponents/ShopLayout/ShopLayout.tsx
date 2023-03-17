@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import products from "../../app/products.json"
 
-interface Item {
+interface JsonItem {
   name: string
   price: number
   imageSrc: string
@@ -19,7 +19,7 @@ const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
   const [selectedValue, setSelectedValue] = useState("")
 
   const specificCategory = products.filter(
-    (product: Item) => product.category === category
+    (product: JsonItem) => product.category === category
   )
 
   const sortedList = specificCategory.slice().sort((a, b) => {
@@ -32,7 +32,7 @@ const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
     }
   })
 
-  const productList = sortedList.map((product: Item) => (
+  const productList = sortedList.map((product: JsonItem) => (
     <Link to={`/items/${product.id}`}>
       <div
         key={product.id}
@@ -68,12 +68,7 @@ const ShopLayout: React.FC<Props> = ({ category, pageTitle }) => {
   return (
     <>
       <div
-      // data-aos="zoom-in"
-      // data-aos-duration="500"
-      // data-aos-easing="ease-in-out"
-      // data-aos-mirror="true"
-      // data-aos-once="false"
-      // data-aos-anchor-placement="top-center"
+     
       >
         <div className="headline flex flex-col text-center">
           <h1 className="text-white font-bold text-4xl lg:hidden">

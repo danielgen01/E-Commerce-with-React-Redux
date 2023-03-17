@@ -8,14 +8,9 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { addItem } from "../../features/Cart/CartReducer"
 import { RootState } from "../../app/store"
 import { Description } from "./productComponents/Description"
+import { Item } from "../../features/Cart/CartReducer"
 
-interface Item {
-  id: string
-  name: string
-  price: number
-  imageSource: string
-  
-}
+
 
 const ProductPage: React.FC = () => {
   const dispatch = useAppDispatch()

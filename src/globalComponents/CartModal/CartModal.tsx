@@ -83,7 +83,7 @@ const CartModal: React.FC = () => {
                     <h2 className="text-xl font-medium text-center">
                       {product.name}
                     </h2>
-                    <h2 className="font-medium">{product.price}</h2>
+                    <h2 className="font-medium">{product.price}€</h2>
                     <h2>Menge:1</h2>
                   </div>
                 </li>

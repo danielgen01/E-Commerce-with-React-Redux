@@ -64,7 +64,7 @@ const Cart: React.FC = () => {
                               />
                             </Link>
                             <div className="product-details  flex flex-col justify-center text-center gap-2">
-                              <h2 className="text-white text-md lg:text-xl font-semibold ">
+                              <h2 className="text-white text-md lg:text-xl font-md ">
                                 {item.name}
                               </h2>
                               <h2
@@ -90,20 +90,20 @@ const Cart: React.FC = () => {
                              flex items-center justify-between w-1/2
                                border-sky-500 border-2 rounded-md"
                             >
-                              <AiOutlineMinus className="text-white" />
+                              <AiOutlineMinus className="text-white cursor-not-allowed" title="currently is only 1 item per user allowed" />
                               <input
                                 type="number"
                                 defaultValue={1}
                                 readOnly={true}
                                 className="text-white bg-Navbar-grey outline-none w-2/6 cursor-default "
                               />
-                              <AiOutlinePlus className="text-white" />
+                              <AiOutlinePlus className="text-white cursor-not-allowed" title="currently is only 1 item per user allowed"/>
                             </div>
                           </div>
 
                           <div className="item-price-ctn flex items-center justify-center w-1/3">
                             <div className="item-gesamt-price flex justify-center">
-                              <h4 className="text-4xl text-white">€</h4>
+                              <h4 className="text-2xl text-white">{item.price}€</h4>
                             </div>
                           </div>
                         </li>
