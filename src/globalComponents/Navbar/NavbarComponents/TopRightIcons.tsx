@@ -19,8 +19,8 @@ export const TopRightIcons: React.FC = () => {
 
   return (
     <div className="flex gap-5 text-3xl ml-auto mr-5">
-      <HiSearch className="bx bx-search cursor-pointer hover:text-sky-500 duration-300" />
-      <CgProfile className="bx bx-user-circle cursor-pointer  hover:text-sky-500 duration-300" />
+      {/* <HiSearch className="bx bx-search cursor-pointer hover:text-sky-500 duration-300" />
+      <CgProfile className="bx bx-user-circle cursor-pointer  hover:text-sky-500 duration-300" /> */}
       <div className="flex">
         <AiOutlineShopping
           className="bx bx-cart cursor-pointer  hover:text-gray-600 duration-300"
