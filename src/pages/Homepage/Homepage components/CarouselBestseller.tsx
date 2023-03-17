@@ -44,7 +44,7 @@ const CarouselBestseller:React.FC = () => {
     flex flex-col justify-center items-center gap-2 shrink-0 grow-0
     lg:w-1/5"
       key={product.id}
-    > 
+    > <Link to={`/items/${product.id}`} className="flex flex-col justify-center items-center">
       <h2
         className="text-white font-bold text-sm 
       lg:text-xl"
@@ -63,9 +63,9 @@ const CarouselBestseller:React.FC = () => {
         hover:bg-white hover:text-black duration-500  active:animate-ping
         lg:px-5"
       >
-        In den Einkaufswagen
+        Produkt ansehen
       </button>
-      
+      </Link>
     </div>
    
   ))
