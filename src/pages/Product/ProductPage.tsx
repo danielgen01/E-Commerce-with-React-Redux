@@ -13,6 +13,7 @@ interface Item {
   name: string
   price: number
   imageSource: string
+  
 }
 
 const ProductPage: React.FC = () => {
@@ -39,7 +40,8 @@ const ProductPage: React.FC = () => {
       id: product.id,
       name: product.name,
       price: product.price,
-      imageSource: product.imageSrc,
+      imageSource: product.imageSrc
+    
     }
 
     const existingItem: Item | undefined = cartItems.find(

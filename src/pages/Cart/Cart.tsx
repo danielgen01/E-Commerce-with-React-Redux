@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useAppDispatch,useAppSelector } from "../../app/hooks"
 import { RootState } from "../../app/store"
-import { removeItem, Item } from "../../features/Cart/CartReducer"
+import { removeItem, Item, calculateTotal } from "../../features/Cart/CartReducer"
 
 
 
@@ -16,6 +16,9 @@ const Cart: React.FC = () => {
     const handleRemoveItem = (item: Item) => {
       dispatch(removeItem(item))
     }
+
+    const totalCost = calculateTotal(cartItems)
+
 
    
 
@@ -123,7 +126,7 @@ const Cart: React.FC = () => {
             <div className=" border-b border-white/80 w-fulltext-left"></div>{" "}
             <div className="flex justify-between text-lg font-medium">
               <h2 className="text-white">Zwischensumme</h2>
-              <h2 className="text-white">0€</h2>
+              <h2 className="text-white">{totalCost}€</h2>
             </div>
             <div className=" border-b border-white/80 w-full text-left"></div>{" "}
             <div className="gesamtsumme flex justify-between font-bold text-xl">

@@ -5,6 +5,7 @@ import { toggleCartModal } from "../../features/CartModal/cartModalReducer"
 import { AiOutlineClose, AiOutlineArrowRight } from "react-icons/ai"
 import TransparentBackground from "../TransparentBackground/TransparentBackground"
 import { Link } from "react-router-dom"
+import { calculateTotal } from "../../features/Cart/CartReducer"
 
 const CartModal: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -17,6 +18,9 @@ const CartModal: React.FC = () => {
   const handleCloseModalClick = () => {
     dispatch(toggleCartModal())
   }
+
+  const totalCost = calculateTotal(cartItems)
+
 
   return (
     <>
@@ -38,7 +42,7 @@ const CartModal: React.FC = () => {
           <h2 className="text-white font-bold  text-xl ml-3">
             DEINE BESTELLUNG:
           </h2>
-          <h2 className="text-white font-semibold text-md ">Artikel: {cartItems.length} | €</h2>
+          <h2 className="text-white font-semibold text-md ">Artikel: {cartItems.length} | {totalCost}€</h2>
         </div>
 
         <div

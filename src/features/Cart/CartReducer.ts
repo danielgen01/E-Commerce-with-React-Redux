@@ -31,6 +31,16 @@ export const cartSlice = createSlice({
   },
 })
 
+export const calculateTotal = (items: Item[]) => {
+  return items.reduce((total, item) => total + item.price, 0)
+}
+
+
+
 export const { addItem, removeItem, clearCart } = cartSlice.actions
+
+
+
+
 
 export default cartSlice.reducer
