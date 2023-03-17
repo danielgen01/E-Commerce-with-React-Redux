@@ -118,7 +118,7 @@ const Cart: React.FC = () => {
           <div className="übersicht content mx-5 flex flex-col gap-5 mt-5">
             <div className="übersicht-header flex justify-between items-center text-xl font-semibold">
               <h1 className="text-white">ÜBERSICHT</h1>
-              <h1 className="text-white">0 ARTIKEL</h1>
+              <h1 className="text-white">{cartItems.length} ARTIKEL</h1>
             </div>
             <div className=" border-b border-white/80 w-fulltext-left"></div>{" "}
             <div className="flex justify-between text-lg font-medium">

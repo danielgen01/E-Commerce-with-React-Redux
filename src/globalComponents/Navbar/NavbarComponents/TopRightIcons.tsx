@@ -8,7 +8,10 @@ import { toggleCartModal } from "../../../features/CartModal/cartModalReducer"
 
 export const TopRightIcons: React.FC = () => {
   const dispatch = useAppDispatch()
-  // const isCartModalOpen = useAppSelector((state:RootState) => state.cartModalSlice.isCartModalOpen)
+
+  const cartItems = useAppSelector(
+    (state: RootState) => state.CartReducer.items
+  )
 
   const handleCartIconClick = () => {
     dispatch(toggleCartModal())
@@ -24,7 +27,7 @@ export const TopRightIcons: React.FC = () => {
           onClick={handleCartIconClick}
         />
         <h2 className="text-white text-sm bg-sky-500 text-center rounded-full w-5 h-5 -ml-4 -mt-2">
-          0
+          {cartItems.length}
         </h2>
       </div>
     </div>

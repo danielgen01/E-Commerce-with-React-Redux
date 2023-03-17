@@ -38,7 +38,7 @@ const CartModal: React.FC = () => {
           <h2 className="text-white font-bold  text-xl ml-3">
             DEINE BESTELLUNG:
           </h2>
-          <h2 className="text-white font-semibold text-md ">Artikel: 0 | €</h2>
+          <h2 className="text-white font-semibold text-md ">Artikel: {cartItems.length} | €</h2>
         </div>
 
         <div
