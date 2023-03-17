@@ -1,20 +1,21 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useAppDispatch,useAppSelector } from "../../app/hooks"
+import { RootState } from "../../app/store"
+import { removeItem, Item } from "../../features/Cart/CartReducer"
 
 
 
 
-interface Item {
-  id: string
-  name: string
-  price: number
-  imageSource: string
-}
+
 
 const Cart: React.FC = () => {
     const dispatch = useAppDispatch()
-    // const cartItems = useAppSelector((state: any) => state.cart.items)
+    const cartItems = useAppSelector((state: RootState) => state.CartReducer.items)
+
+    const handleRemoveItem = (item: Item) => {
+      dispatch(removeItem(item))
+    }
 
    
 
@@ -55,13 +56,13 @@ const Cart: React.FC = () => {
 
       <div className="grid-wrapper grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
         <div className="h-[50%] cart-items xl:col-span-3 lg:col-span-2 ">
-          {/* {cartItems.length > 0 && 
+          {cartItems.length > 0 && 
           <> 
           <ul className="flex flex-col mx-1 gap-5 itemscolumn lg:items-center">
             {cartItems.map((item: Item, index: any) => (
               <>
                 <li
-                  key={Math.floor(Math.random() * 20000000)}
+                  key={item.id}
                   className="flex flex-row items-center py-5 single-itemRow w-auto lg:w-3/4 h-auto  gap-2"
                 >
                   <div className="image-div w-3/6 h-full flex flex-col gap-5 justify-center items-center rounded">
@@ -77,7 +78,7 @@ const Cart: React.FC = () => {
                     </h2>
                     <h2
                       className=" text-sm lg:text-xl cursor-pointer text-sky-500 underline hover:font-bold"
-                      
+                      onClick={() => handleRemoveItem(item)}
                     >
                       Entfernen
                     </h2>
@@ -107,7 +108,7 @@ const Cart: React.FC = () => {
               </>
             ))}
           </ul> 
-          </>} */}
+          </>}
 
         </div>
 
