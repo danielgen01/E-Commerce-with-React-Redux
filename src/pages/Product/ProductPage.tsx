@@ -19,18 +19,7 @@ const ProductPage: React.FC = () => {
   // const cartItems = useAppSelector(
   //   (state: RootState) => state.CartReducer.items
   // )
-
-  const handleAddItem = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const target = event.target as HTMLButtonElement
-    const newItem: Item = {
-      id: target.dataset.id!,
-      name: target.dataset.name!,
-      price: parseInt(target.dataset.price!),
-      imageSource: target.dataset.image!,
-    }
-    dispatch(addItem(newItem))
-  }
-
+  
   const [isDescriptionOpen, setIsDescriptionOpen] = useState<boolean>(false)
 
   const { id } = useParams<{ id: string }>()
@@ -44,29 +33,38 @@ const ProductPage: React.FC = () => {
     setIsDescriptionOpen(!isDescriptionOpen)
   }
 
+  const handleAddItem = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const newItem: Item = {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      imageSource: product.imageSrc,
+    }
+    dispatch(addItem(newItem))
+  }
+
   return (
     <div className="product-page">
       <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center mt-20 h-3/4 ">
         <div
           className="grid-item-2 image-ctn flex flex-col items-center w-screen lg:w-auto justify-center  "
-          data-id={product.id}
+          
         >
           <h1
             className="text-2xl font-bold product-name text-white"
-            data-name={product.name}
           >
             {product.name}{" "}
           </h1>
           <img
-            data-image={product.imageSrc}
             src={product.imageSrc}
             alt={product.name}
             title={product.name}
+            
             className="h-[20rem]"
           />
         </div>
         <div className="grid-item-2 flex flex-col gap-5 items-center justify-center">
-          <h1 className="text-4xl font-bold text-white" data-price={product.price}>
+          <h1 className="text-4xl font-bold text-white">
             {product.price}€ 
           </h1>
           <div className=" border-b border-white/80 lg:w-1/2 w-full text-left"></div>{" "}

@@ -11,6 +11,8 @@ const CartModal: React.FC = () => {
   const isCartModalOpen = useAppSelector(
     (state: RootState) => state.cartModalReducer.isCartModalOpen
   )
+  const cartItems = useAppSelector((state: RootState) => state.CartReducer.items)
+
 
   const handleCloseModalClick = () => {
     dispatch(toggleCartModal())
@@ -47,7 +49,7 @@ const CartModal: React.FC = () => {
             className="cart-items 
         flex flex-col gap-10 w-full justify-center"
           >
-            {/* {cartItems.map((product: any) => (
+             {cartItems.map((product: any) => (
               <>
                 <li
                   key={product.id}
@@ -58,7 +60,7 @@ const CartModal: React.FC = () => {
                 >
                   <div>
                  <img
-                      src={product.image}
+                      src={product.imageSource}
                       className="w-[150px]"
                       alt="product_image"
                       title={product.title}
@@ -67,20 +69,20 @@ const CartModal: React.FC = () => {
 
                   <div className="flex flex-col justify-center items-center gap-3">
                     <h2 className="text-xl font-medium text-center">
-                      {product.title}
+                      {product.name}
                     </h2>
                     <h2 className="font-medium">{product.price}</h2>
-                    <h2>Menge: {product.quantity}</h2>
+                    <h2>Menge:1</h2>
                   </div>
                 </li>
                 <div className=" border-b border-white/80 w-full mx-auto "></div>{" "}
               </>
-            ))} */}
+            ))} 
           </ul>
         </div>
 
-        {/* {cartItems.length > 0 && (
-          <> */}
+         {cartItems.length > 0 && (
+          <> 
         <div className="flex justify-center items-center w-auto">
           <Link to="/Cart">
             <button
@@ -92,8 +94,8 @@ const CartModal: React.FC = () => {
             </button>
           </Link>
         </div>
-        {/* </>
-        )} */}
+         </>
+        )} 
       </div>
     </>
   )
