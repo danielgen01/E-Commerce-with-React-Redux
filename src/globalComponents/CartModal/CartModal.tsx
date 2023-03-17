@@ -32,15 +32,15 @@ const CartModal: React.FC = () => {
 
       <div
         className="cart-modal  absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2
-          text-white w-96 h-[450px] bg-[#1d2021]  rounded  lg:w-[500px] lg:h-[700px] lg:-translate-x-1/5 z-50"
+          text-white w-96 h-[450px] bg-[#1d2021]  rounded  lg:w-[500px] lg:h-[700px] lg:-translate-x-1/2 lg:left-3/4 z-50"
         style={{ display: isCartModalOpen ? "block" : "none" }}
       >
         <AiOutlineClose
           className="text-5xl ml-auto cursor-pointer"
           onClick={handleCloseModalClick}
         />
-        <div className="flex justify-between mx-5 mt-5">
-          <h2 className="text-white font-bold  text-xl ml-3">
+        <div className="flex justify-between mx-5 lg:mt-5">
+          <h2 className="text-white font-bold  lg:text-xl ml-3">
             DEINE BESTELLUNG:
           </h2>
           <h2 className="text-white font-semibold text-md ">
