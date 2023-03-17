@@ -5,6 +5,7 @@ import { FaChevronUp } from "react-icons/fa"
 import {BsFillCartPlusFill} from "react-icons/bs"
 import { useAppDispatch,useAppSelector } from "../../app/hooks"
 import { addItem } from "../../features/Cart/CartReducer"
+import { RootState } from "../../app/store"
 
 
 
@@ -19,7 +20,7 @@ interface Item {
 const ProductPage: React.FC = () => {
 
   const dispatch = useAppDispatch()
-  const cartItems = useAppSelector((state: any) => state.cart.items)
+  const cartItems = useAppSelector((state: RootState) => state.CartReducer.items)
 
   const handleAddItem = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.target as HTMLButtonElement;
@@ -30,6 +31,7 @@ const ProductPage: React.FC = () => {
       imageSource: target.dataset.image!
     };
     dispatch(addItem(newItem));
+    
   }
   
 
@@ -54,7 +56,7 @@ const ProductPage: React.FC = () => {
         <div className="grid-item-2 image-ctn flex flex-col items-center w-screen lg:w-auto justify-center  ">
         <h1 className="text-2xl font-bold product-name text-white">{product.name} </h1>
           <img
-            // ref={imageRef}
+            
             src={product.imageSrc}
             alt={product.name}
             title={product.name}
