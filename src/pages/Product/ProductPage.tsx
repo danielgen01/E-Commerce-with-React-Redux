@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useState, useRef } from "react"
 import { useParams } from "react-router-dom"
 import products from "../../app/products.json"
@@ -16,10 +17,10 @@ interface Item {
 
 const ProductPage: React.FC = () => {
   const dispatch = useAppDispatch()
-  // const cartItems = useAppSelector(
-  //   (state: RootState) => state.CartReducer.items
-  // )
-  
+  const cartItems = useAppSelector(
+    (state: RootState) => state.CartReducer.items
+  )
+
   const [isDescriptionOpen, setIsDescriptionOpen] = useState<boolean>(false)
 
   const { id } = useParams<{ id: string }>()
@@ -40,33 +41,32 @@ const ProductPage: React.FC = () => {
       price: product.price,
       imageSource: product.imageSrc,
     }
-    dispatch(addItem(newItem))
-  }
 
+    const existingItem: Item | undefined = cartItems.find(
+      (item) => item.id === newItem.id
+    )
+    if (existingItem) {
+      alert("Product already in cart")
+    } else {
+      dispatch(addItem(newItem))
+    }
+  }
   return (
     <div className="product-page">
       <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center mt-20 h-3/4 ">
-        <div
-          className="grid-item-2 image-ctn flex flex-col items-center w-screen lg:w-auto justify-center  "
-          
-        >
-          <h1
-            className="text-2xl font-bold product-name text-white"
-          >
+        <div className="grid-item-2 image-ctn flex flex-col items-center w-screen lg:w-auto justify-center  ">
+          <h1 className="text-2xl font-bold product-name text-white">
             {product.name}{" "}
           </h1>
           <img
             src={product.imageSrc}
             alt={product.name}
             title={product.name}
-            
             className="h-[20rem]"
           />
         </div>
         <div className="grid-item-2 flex flex-col gap-5 items-center justify-center">
-          <h1 className="text-4xl font-bold text-white">
-            {product.price}€ 
-          </h1>
+          <h1 className="text-4xl font-bold text-white">{product.price}€</h1>
           <div className=" border-b border-white/80 lg:w-1/2 w-full text-left"></div>{" "}
           <button
             className="text-black font-bold text-xl bg-sky-500 py-4 rounded px-10

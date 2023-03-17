@@ -63,7 +63,7 @@ const CartModal: React.FC = () => {
                       src={product.imageSource}
                       className="w-[150px]"
                       alt="product_image"
-                      title={product.title}
+                      title={product.name}
                     />
                   </div>
 
