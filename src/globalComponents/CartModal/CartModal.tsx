@@ -6,6 +6,7 @@ import { AiOutlineClose, AiOutlineArrowRight } from "react-icons/ai"
 import TransparentBackground from "../TransparentBackground/TransparentBackground"
 import { Link } from "react-router-dom"
 import { calculateTotal } from "../../features/Cart/CartReducer"
+import EmpyCartModal from "./EmptyCartModal"
 
 const CartModal: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -46,6 +47,11 @@ const CartModal: React.FC = () => {
             Artikel: {cartItems.length} | {totalCost}€
           </h2>
         </div>
+
+        {cartItems.length === 0 &&
+      <>
+      <EmpyCartModal />
+      </>}
 
         <div
           className="cart-items-in-cart
@@ -104,7 +110,10 @@ const CartModal: React.FC = () => {
           </>
         )}
       </div>
+      
     </>
+
+    
   )
 }
 
