@@ -8,10 +8,7 @@
   display: none;
 }
 
-@font-face {
-  font-family: "Galano";
-  src: url(assets/galano-grotesque-bold-webfont.woff2);
-}
+
 
 body {
   margin: 0;
@@ -22,7 +19,7 @@ body {
   scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   body {
     font-family: Helvetica, Arial, "Open Sans", Roboto, Lato, sans-serif !important;
   }
