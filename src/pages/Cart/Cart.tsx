@@ -29,6 +29,10 @@ const Cart: React.FC = () => {
     alert("This shop is unfortunately not a real business")
   }
 
+  function handleQuantityChange() {
+    alert("currently is only 1 item per user allowed")
+  }
+
   return (
     <>
       <div className="cart-body bg-black min-h-screen">
@@ -90,14 +94,14 @@ const Cart: React.FC = () => {
                              flex items-center justify-between w-1/2
                                border-sky-500 border-2 rounded-md"
                             >
-                              <AiOutlineMinus className="text-white cursor-not-allowed" title="currently is only 1 item per user allowed" />
+                              <AiOutlineMinus className="text-white cursor-not-allowed" title="currently is only 1 item per user allowed" onClick={handleQuantityChange}/>
                               <input
                                 type="number"
                                 defaultValue={1}
                                 readOnly={true}
                                 className="text-white bg-Navbar-grey outline-none w-2/6 cursor-default "
                               />
-                              <AiOutlinePlus className="text-white cursor-not-allowed" title="currently is only 1 item per user allowed"/>
+                              <AiOutlinePlus className="text-white cursor-not-allowed" title="currently is only 1 item per user allowed" onClick={handleQuantityChange}/>
                             </div>
                           </div>
 
